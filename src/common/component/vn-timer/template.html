@@ -1,0 +1,21 @@
+<div  class="timer-container">
+    <div ng-hide="isTimeOver">
+        <div  class="time">
+            <div>倒计时</div>
+            <span ng-bind="time.day "></span>
+            <span>天</span>
+            <span ng-bind="time.hour"></span>
+            <span>:</span>
+            <span ng-bind="time.min"></span>
+            <span>:</span>
+            <span ng-bind="time.sec"></span>
+
+        </div>
+
+    </div>
+    <div ng-show="isTimeOver">
+        <div class="time">
+            <section class="over-div">活动结束</section>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="pg_registry--body">
+
+  <div class="m-b-10 text-center">
+    <h3>
+     登录
+    </h3>
+    <small>
+    Login
+    </small>
+  </div>
+
+  <hr class="bc-primary"/>
+
+  <!--<form class="form-horizontal"ng-submit="vm.login()">-->
+    <form class="form-horizontal" ng-submit="vm.login()"  >
+    <div class="form-group has-feedback ">
+      <label class="control-label col-md-3 " for="Userid">用户名</label>
+      <div class="col-md-7">
+        <input type="text" id="Userid"class="form-control" autofocus placeholder="邮箱或手机号"ng-model="vm.username"/>
+        <!--<div class="glyphicon glyphicon-ok form-control-feedback"></div>-->
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="pwd" class="control-label col-md-3">密码</label>
+      <div class="col-md-7">
+        <input type="password" id="pwd" class="form-control"placeholder="密码" ng-model="vm.password"/>
+      </div>
+    </div>
+
+    <!--<hr class="bc-primary"/>-->
+
+    <div class="text-center">
+      &nbsp;&nbsp;
+      <button class="btn" type="submit" ng-click="vm.loginUser()" >
+        登录
+      </button>
+
+      <div class="pg_login--more">
+      <a  class="pg_login--registration"  ui-sref="registry">
+        新用户注册
+      </a>
+      <br>
+      <!--<a href="" class="pg_login&#45;&#45;help" ui-sref="qrcode">-->
+      <!--移动端下载-->
+      <!--</a>-->
+    </div>  </div>
+  </form>
+
+</div>
+
+
+
+<div class="pg_login--copyright" ng-bind="ENV.COPY_RIGHT"></div>

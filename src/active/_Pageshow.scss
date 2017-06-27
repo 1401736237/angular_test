@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* purpose 网站通用 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em,b,a
+{margin:0;padding:0;border:0;font-family: Microsoft Yahei,"宋体",Arial; font-weight:normal;  font-style:normal; text-decoration:none; list-style:none;}
+a{blr:expression(this.onFocus=this.blur())}/*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+:focus{outline:0;}
+label{cursor:pointer;}
+img{vertical-align:middle;}
+a{cursor:pointer;}
+a:visited{text-decoration:none !important;}
+a:hover{text-decoration:none !important;}
+input{outline: none;}
+
+
+
+@media screen and (min-width:1200px){
+  .bianshou{cursor:pointer;}//
+
+  /* width 宽 */
+
+  .width100{ width:100%;}/**/
+
+
+  .width_100{ width:100px;}
+
+  .width_224{ width:224px;}
+
+
+  /* height 高 */
+
+  .height48{ height:48px;}
+
+  .height172{ height:172px;}
+  .height193{ height:193px;}
+
+  .height490{ height:490px;}
+
+  /* bold 粗体 */
+  .b_weight400{ font-weight:400;}
+
+  .b_weight_bold{ font-weight:bold;}
+
+  /* overflow 滚动条 */
+  .over_hidden{ overflow:hidden}
+  .over_auto{ overflow:auto}
+
+  /* float 浮动 */
+  .float_l{ float:left;}  //
+  .float_r{ float:right;}
+
+  /* display 隐藏显示 */
+  .dis_block{ display:block;}
+  .dis_none{ display:none;}
+
+  /* display 文本左右中 */
+  .text_l{ text-align:left;}
+  .text_r{ text-align:right;}
+  .text_c{ text-align:center;}
+
+
+  .padding_lr10{ padding:0 10px;}
+  .padding_lr15{ padding:0 15px;}
+  .padding_lr20{ padding:0 20px;} //
+  .padding_lr30{ padding:0 30px;}
+
+  .padding_tb5{ padding:5px 0;}
+
+
+  .padding_l5{ padding-left:5px;}
+
+
+  .padding_r5{ padding-right:5px;}
+
+  .padding_t5{ padding-top:5px;}
+
+
+  .padding_b5{ padding-bottom:5px;}
+
+
+  /* margin 外边距 */
+  .margin_auto{ margin:0 auto;}
+  .margin_lr-10{margin:0 -10px;}
+  .margin5{ margin:5px;}
+
+
+  .margin_l5{ margin-left:5px;}
+
+
+  .margin_r5{ margin-right:5px;}
+
+  .margin_r20{ margin-right:20px;}//
+
+
+  .margin_t5{ margin-top:5px;}  //
+
+  .margin_t15{ margin-top:15px;}//
+  .margin_b10{ margin-bottom: 10px;}
+
+  /* font-size 文字大小 */
+  .fon_siz12{ font-size:12px;}//
+  .fon_siz14{ font-size:14px;}
+  .fon_siz16{ font-size:16px;}
+  .fon_siz18{ font-size:18px;}
+  .fon_siz20{ font-size:20px;}
+  .fon_siz24{ font-size:24px;}
+  .fon_siz32{ font-size:32px;}
+
+  /* line-height 行间距 */
+  .line_hei12{ line-height:12px;}
+
+  .line_hei48{ line-height:48px;} //
+
+
+  /* letter 字间距 */
+  .letter5{letter-spacing:5px;}
+
+  /* color 字体颜色 */
+  .color_white{ color:#FFFFFF;}		/* color 白色 */
+  .color_gray{ color:#93999f;}	//	/* color 灰色 */
+
+
+  /* background 背景色 */
+  .backg_white{ background-color:#FFFFFF;}	// /* color 白色 */
+  .backg_gray{ background-color:#C0C0C0;}		/* color 灰色 */
+  .img_bgc_white{background-size:100% 100%;background-repeat:no-repeat;background-color: white;  }
+
+
+  /* transparent 透明 */
+  .backg_tran8{ filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;}
+
+
+  /* z-index 权重 */
+  .z_inx_-1{z-index:-1;}
+  .z_inx_1{z-index:1;}//
+
+  .z_inx_3{z-index:3;}  //
+
+
+  /* position 定位 */
+  .posi_absolute{ position:absolute; left:0; top:0;}
+  .posi_relative{ position:relative; left:0; top:0;}  //
+
+
+  /* border 边框 */
+  .border{ border:1px solid #ccc;}
+
+
+
+  /* style 独立样式 开始 */
+
+  .img_100 img{ width:100%; height:124px;}
+
+  .border_shadow{ -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);-moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);}
+  .border_shadow:hover{ -webkit-box-shadow: 0 7px 10px 0 rgba(0,0,0,0.2);-moz-box-shadow: 0 7px 10px 0 rgba(0,0,0,0.2);box-shadow: 0 7px 10px 0 rgba(0,0,0,0.2);}
+  .donghua{position: absolute; padding: 0 20px; transition: top .5s; top: 70px; height: 144px; width:100%;}
+  .moveup:hover .donghua{position: absolute; padding: 0 20px; transition: top .5s; top: 30px; height: 144px; width:100%;}
+  .over_pos{overflow: hidden; position: relative;}
+
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px){
+  .width_224 {display: none};
+  .height172 {display: none};
+  .float_l{display: none};
+  .margin_r20{display: none};
+  .margin_b10{display: none};
+  .border_shadow{display: none};
+  .moveup{display: none};
+  .over_pos{display: none};
+  .width100{display: none};
+  .img_100{display: none};
+  .z_inx_1{display: none};
+  .img_bgc_white{display: none};
+  .donghua{display: none};
+  .margin_t15{display: none};
+  .fon_siz12{display:none};
+  .color_gray{display:none};
+  .margin_t5{display:none};
+  .posi_relative{display:none};
+  .padding_lr20{display:none};
+  .height48{display:none};
+  .height48{display:none};
+  .z_inx_3{display:none};
+  .backg_white{display:none};
+}
+@media screen and (min-width: 768px) and (max-width: 959px){
+  .width_224 {display: none};
+  .height172 {display: none};
+  .float_l{display: none};
+  .margin_r20{display: none};
+  .margin_b10{display: none};
+  .border_shadow{display: none};
+  .moveup{display: none};
+  .over_pos{display: none};
+  .width100{display: none};
+  .img_100{display: none};
+  .z_inx_1{display: none};
+  .img_bgc_white{display: none};
+  .donghua{display: none};
+  .margin_t15{display: none};
+  .fon_siz12{display:none};
+  .color_gray{display:none};
+  .margin_t5{display:none};
+  .posi_relative{display:none};
+  .padding_lr20{display:none};
+  .height48{display:none};
+  .height48{display:none};
+  .z_inx_3{display:none};
+  .backg_white{display:none};
+}
+@media (max-width:768px){
+  .width_224 {display: none};
+  .height172 {display: none};
+  .float_l{display: none};
+  .margin_r20{display: none};
+  .margin_b10{display: none};
+  .border_shadow{display: none};
+  .moveup{display: none};
+  .over_pos{display: none};
+  .width100{display: none};
+  .img_100{display: none};
+  .z_inx_1{display: none};
+  .img_bgc_white{display: none};
+  .donghua{display: none};
+  .margin_t15{display: none};
+  .fon_siz12{display:none};
+  .color_gray{display:none};
+  .margin_t5{display:none};
+  .posi_relative{display:none};
+  .padding_lr20{display:none};
+  .height48{display:none};
+  .height48{display:none};
+  .z_inx_3{display:none};
+  .backg_white{display:none};
+}
+

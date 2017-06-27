@@ -1,0 +1,25 @@
+<form class="form-horizontal" role="form">
+
+    <div class="form-group row">
+        <label for="oldpass" class="col-sm-2 control-label">旧密码<span style="color: red" >*</span></label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" style="width:250px;" id="oldpass" required placeholder="请输入旧密码"><span id="oldpassTip" style="display:none;color:red;"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="newpass" class="col-sm-2 control-label">新密码<span style="color: red" >*</span></label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" style="width:250px;" id="newpass"pattern="[A-Za-z0-9]{ 6,18; }" required title="请输入6-18个字符" placeholder="请输入新密码"><span id="newpassTip" style="display:none;color:red;"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="newpassAgain" class="col-sm-2 control-label">再次确认新密码<span style="color: red" >*</span></label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" style="width:250px;" id="newpassAgain" required placeholder="请再次输入新密码"><span id="newpassAgainTip" style="display:none;color:red;"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">  </label>
+        <button type="submit" class="btn btn-primary" id="submit" style="text-align:center;">确认修改</button>
+    </div>
+</form>

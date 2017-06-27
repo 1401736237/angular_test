@@ -1,0 +1,31 @@
+
+@mixin side($right:30px,$bottom:20px){
+  position: fixed;
+  right: $right;
+  bottom: $bottom;
+}
+@mixin show_qr{
+  position: absolute;
+  left:-153px;
+  top: -120px;
+  display: none;
+}
+.Left-eject {
+  @include side()
+}
+span.show_qr{
+   @include show_qr
+}
+.Left-eject:hover span.show_qr{
+  display: block;
+}
+
+.qrcode_size{ width: 150px;height: 150px;}
+
+
+@media screen and (max-width:768px){
+  .Left-eject{display: none;}
+  .show_qr{display: none;}
+}
+.date_count{position: absolute; margin-left: 7%; padding-top: 5px}
+.hide_title{height: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}

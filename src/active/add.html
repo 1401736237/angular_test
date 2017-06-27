@@ -1,0 +1,97 @@
+
+<div class=" container-fluid content-row col-md-10 col-xs-12 col-sm-10" ng-app="App" >
+
+    <div class="panel panel-default ">
+        <div class=" panel-heading">
+            <div class="panel-title"><b>添加活动</b>
+            </div>
+
+        </div>
+
+        <div class=" panel-body">
+            <form novalidate="" role="form" class="form-horizontal ">
+                <div class="form-group ">
+                    <label class="col-md-2 col-xs-4 control-label">活动标题</label>
+                    <div class="col-md-9 col-xs-8">
+                        <input type="text" required="" placeholder="活动标题" id="title" class="form-control" name="title"ng-model="add.name">
+                    </div>
+                    {{add.name}}
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 col-xs-4 control-label">活动地点</label>
+                    <div class="col-md-9 col-xs-8">
+                        <input type="text" required="" placeholder="活动地点" id="subject" class="form-control" name="title"ng-model="add.address">
+                    </div>
+                    {{add.address}}
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 col-xs-4 control-label" for="description">活动描述</label>
+                    <div class="col-md-9 col-xs-8">
+                        <textarea required="" class="form-control" placeholder="请输入内容，不超过300字" rows="10" cols="30" maxlength="300" id="description" name="description" ng-model="a"></textarea>
+                        <span >{{a.length}}/300</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 col-xs-4 control-label">开始时间</label>
+                    <div class="col-md-9 col-xs-8">
+                        <p class="input-group">
+
+                            <input type="text" class="form-control" uib-datepicker-popup="yyyy-MM-dd"
+                                   ng-model="vm.start" is-open="vm.popup1.opened" datepicker-options="vm.dateOptions"
+                                   ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.open1()">
+                                    <i class="glyphi    con glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                        <span> 开始： {{vm.start}}</span>
+                    </div>
+                </div>
+                    <div class="form-group">
+
+                        <label class="col-md-2 col-xs-4 control-label">结束时间</label>
+                        <div class="col-md-9 col-xs-8">
+                            <p class="input-group">
+                                <input type="text" class="form-control" uib-datepicker-popup ng-model="vm.end"
+                                       is-open="vm.popup2.opened" datepicker-options="vm.dateOptions"
+                                       ng-required="true" close-text="Close" />
+                                <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="vm.open2()">
+                                    <i class="glyphicon glyphicon-calendar"></i></button>
+                             </span>
+                            </p>
+                            <span></span>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label class="col-md-2 col-xs-4 control-label">上传图片</label>
+                    <button ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+                            ngf-accept="'image/*'" ngf-max-size="20MB"
+                            >Select</button>
+
+                    <img class="img-rounded" ngf-thumbnail="file || ''"
+                         ngf-resize="{width: 140, height: 140, quality: .8, type: 'image/jpeg',
+                          ratio: '1:2',  pattern='.jpg', restoreExif: false}"
+                         ngf-size="{width: 220, height: 220, quality: 0.5}">
+
+                </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile" class="col-md-2 col-xs-4 control-label">上传文件</label>
+                        <input type="file" id="exampleInputFile">
+
+                    </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 ">
+                        <button class="col-md-9 col-xs-12 btn btn-info" type="submit" ng-click="submit(add)">提交</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

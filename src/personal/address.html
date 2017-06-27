@@ -1,0 +1,51 @@
+<form >
+
+<div class="form-group row">
+    <div class="col-md-1 col-sm-12 col-xs-12">
+        <label   >地址：</label>
+    </div>
+    <div class="col-md-7 col-sm-12 col-xs-12">
+
+        <!--<input class="form-control " id="address" name="comment" type="text"  ng-model="count.Addresses">-->
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+        <button class="btn btn-primary form-control" type="submit" value="添加" ng-click="vm.addAddress()"  >
+        添加
+    </button>
+
+    </div>
+</div>
+
+<table class="table table-bordered table-hover" >
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>地址</th>
+        <th>操作</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr ng-repeat="count in vm.counts">
+        <td ng-bind="$index+1">
+
+        </td>
+        <td >
+            <input type="text" class="form-control" value="{{count.Addresses}}" ng-model="count.Addresses">
+
+        </td>
+        <td>
+            <span class="col-md-4">
+                <button class="btn btn-danger form-control" ng-click="vm.deleteAddress($index)">Delete</button>
+            </span>
+        </td>
+    </tr>
+    <tr>
+
+
+    </tr>
+    </tbody>
+</table>
+</form>
